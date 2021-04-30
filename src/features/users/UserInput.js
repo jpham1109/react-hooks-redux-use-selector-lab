@@ -18,6 +18,10 @@ function UserInput() {
 
   function handleOnSubmit(event) {
     event.preventDefault();
+    setFormData(formData => ({
+      username: "",
+      hometown: "",
+    }))
     dispatch({ type: "users/add", payload: formData });
   }
 
